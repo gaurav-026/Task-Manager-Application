@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jersey+10&family=Jersey+25&display=swap');
+
+
+.task-card{
+    display: flex;
+width: 90vw;
+/* height: 80px; */
+padding: 12px 30px;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+row-gap: 6px;
+flex-shrink: 0;
+flex-wrap: wrap;
+border-radius: 8px;
+border: 0.75px solid rgba(0, 0, 0, 0.05);
+background: #FEFEFE;
+margin: 6px auto 6px auto;
+}
+/* .task-text{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 3px;
+color: #000;
+font-family: Inter;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 40vw;
+} */
+.task{
+    
+font-size: 18px;
+margin-bottom: 4px;
+}
+.task-role{
+    
+font-size: 14px;
+margin-bottom: 4px;
+
+}
+
+
+@media screen and (min-width: 600){
+    .task-text{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 40vw;
+
+    
+    }
+}
+@media screen and (max-width: 600){
+    .task-text{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 80vw;
+    
+    }
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import { IoAddCircleOutline } from "react-icons/io5";
 import { LuLineChart } from "react-icons/lu";
+import Task from './Task';
 
 
 const Home = () => {
@@ -18,6 +19,14 @@ const Home = () => {
     </button>
     </div>
     </section>
+
+    <h4>Your Today's Tasks</h4>
+    <Task/>
+    <Task/>
+    <Task/>
+    <Task/>
+    <Task/>
+
     </>
   )
 }
