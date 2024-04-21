@@ -1,23 +1,18 @@
 import React from 'react'
 import { GoDotFill } from "react-icons/go";
 import { IoRemoveCircleOutline } from "react-icons/io5";
-import { FiEdit } from "react-icons/fi";
-import './Task.css'
+import { MdDownloadDone } from "react-icons/md";
 
-const Task = () => {
+const Completedtask = () => {
   return (
-    <section className='task-card'>
+
+      <section className='task-card'>
     <div className='task-text'>
     <p className='task'>Low Level Designing, Next.js, Copy, Assessment, Context API</p>
     <p className='task-role'>Office work</p>
     </div>
     <div className='buttons-spacing'>
-    <button className='donebtn'>
-    <GoDotFill className='dot' /> Done
-    </button>
-    <button className='delete'>
-    <FiEdit className='deleteicon'/>
-    </button>
+    <MdDownloadDone className='successicon'/>
     <button className='delete'>
     <IoRemoveCircleOutline className='deleteicon'/>
     </button>
@@ -26,4 +21,4 @@ const Task = () => {
   )
 }
 
-export default Task
+export default Completedtask
