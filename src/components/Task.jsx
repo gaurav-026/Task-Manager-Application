@@ -5,6 +5,9 @@ import { FiEdit } from "react-icons/fi";
 import './Task.css'
 
 const Task = () => {
+
+  //fetching the data from useContext
+  
   return (
     <section className='task-card'>
     <div className='task-text'>

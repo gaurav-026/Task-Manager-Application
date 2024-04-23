@@ -5,7 +5,12 @@
   font-weight: 400;
   font-style: normal;
   font-size: 28px;
+  /* text-decoration: none;
+    outline: none; */
   
+}
+.navlink{
+    text-decoration: none;
 }
 .header{
     background: var(--blue, #2075F3);

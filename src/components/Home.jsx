@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useContext} from 'react'
 import './Home.css'
 import { IoAddCircleOutline } from "react-icons/io5";
 import { LuLineChart } from "react-icons/lu";
 import Task from './Task';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import uuid from 'react-uuid';
+import { AppContext } from '../context/AppContext';
+
 
 
 const Home = () => {
@@ -16,38 +18,32 @@ const Home = () => {
   const [show, setShow] = useState(false);
   const [task, setTask] = useState("");
   const [mark, setMark] = useState("");
-  const [result, setResult] = useState(null);
+  // const [result, setResult] = useState(null);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const {addTask} = useContext(AppContext);
 
-
-  const handletaskChange = (e)=>{
-    // setTask(e.target.value);
+  const handletaskChange = (e) => {
     setTask(e.target.value);
-    // console.log(setTask);
     console.log(e.target.value);
-  }
-  const handlemarkChange = (e)=>{
-    // setMark(e.target.value);
-    setMark(e.target.value);
-    // console.log(setMark);
-    console.log(e.target.value);
-  }
-  const handleSubmit = ()=>{
-      const obj = {task: task, mark: mark};
-      const id = uuid();
-      obj.id = id;
-      // setResult(obj);
-      console.log(obj);
-      console.log(id);
-      handleClose();
   }
 
-  // useEffect(()=>{
-  //   handleSubmit();
-  // },[handleSubmit]);
-  
+  const handlemarkChange = (e) => {
+    setMark(e.target.value);
+    console.log(e.target.value);
+  }
+
+
+  const handleSubmit = () => {
+    const obj = { task: task, mark: mark };
+    const id = uuid();
+    obj.id = id;
+    console.log(obj);
+    addTask(obj);
+    handleClose();
+  }
+
   return (
     <>
       <Modal show={show} onHide={handleClose}>

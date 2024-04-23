@@ -1,5 +1,4 @@
 import React from 'react'
-import Task from './Task'
 import './Analytics.css'
 import Completedtask from './Completedtask'
 const Analytics = () => {
