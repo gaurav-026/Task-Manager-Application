@@ -26,12 +26,12 @@ const Home = () => {
 
   const handletaskChange = (e) => {
     setTask(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
 
   const handlemarkChange = (e) => {
     setMark(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
 
 
@@ -39,7 +39,7 @@ const Home = () => {
     const obj = { task: task, mark: mark };
     const id = uuid();
     obj.id = id;
-    console.log(obj);
+    // console.log(obj);
     addTask(obj);
     handleClose();
   }
@@ -100,10 +100,6 @@ const Home = () => {
       </section>
 
       <h4>Your Today's Tasks</h4>
-      <Task />
-      <Task />
-      <Task />
-      <Task />
       <Task />
 
     </>
