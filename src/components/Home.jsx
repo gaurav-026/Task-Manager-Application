@@ -106,7 +106,7 @@ const Home = () => {
 
       <h4>Your Today's Tasks</h4>
 
-      {loading ? <Spinner /> : <Task />}
+      {loading ? (<Spinner/>) : <Task />}
     </>
   )
 }
