@@ -119,3 +119,8 @@ align-items: center;
 height: 20px;
 color: #1CFE17;
 }
+
+.dummy-text{
+        display: flex;
+        justify-content: center;
+}
