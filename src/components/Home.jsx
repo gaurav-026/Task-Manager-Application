@@ -1,10 +1,10 @@
-import React, { useContext} from 'react'
+import React, { useContext } from 'react'
 import './Home.css'
 import { IoAddCircleOutline } from "react-icons/io5";
 import { LuLineChart } from "react-icons/lu";
 import Task from './Task';
 import { Link } from 'react-router-dom';
-import { useState} from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -22,7 +22,7 @@ const Home = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const {addTask} = useContext(AppContext);
+  const { addTask } = useContext(AppContext);
 
   const handletaskChange = (e) => {
     setTask(e.target.value);
@@ -58,7 +58,6 @@ const Home = () => {
                 type="text"
                 placeholder="eg: going to market after office"
                 autoFocus
-                // value={task}
                 onChange={handletaskChange}
               />
             </Form.Group>
@@ -68,7 +67,6 @@ const Home = () => {
                 type="text"
                 placeholder="eg: very important"
                 autoFocus
-                // value={mark}
                 onChange={handlemarkChange}
               />
             </Form.Group>
