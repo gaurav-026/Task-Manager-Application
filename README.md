@@ -38,3 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 -> uuid : for generating id
 -> ChatGPT
 
+
+### `Considerations`
+
+-> I have firstly used Context Api for myself. It was a bit challenging for me to implement the functionalities using ContextAPI. First I have build my fundamentals on ContextAPI again and then start implementation on the project functionalities. I am also a UI/UX designer, so thinking about good UI was not very challenging for me. This project is going to be one of the favourite project for me. I will definately improve this and will add Full Stack Features in it.
