@@ -15,7 +15,6 @@ const Header = () => {
           </NavLink>
           <Nav className="me-auto">
             <Nav.Link >Support</Nav.Link>
-
           </Nav>
         </Container>
       </Navbar>

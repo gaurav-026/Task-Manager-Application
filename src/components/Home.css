@@ -17,7 +17,8 @@ body {
 
 .addbtn {
     border-radius: 3px;
-    background-color: var(--blue, #2075F3);
+    /* background-color: var(--blue, #2075F3); */
+    background: linear-gradient(to top, #0009fb 0%, #005bea 100%);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
     display: flex;
     height: 35px;
@@ -28,9 +29,11 @@ body {
     color: var(--white, #FFF);
     font-family: Inter;
     font-weight: 400;
+    text-decoration: none;
+    outline: none;
 
     &:hover {
-        background-color: var(--blue, #0963eb);
+        background : var(--blue, #025ce4);
     }
 }
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './Home.css'
 import { IoAddCircleOutline } from "react-icons/io5";
 import { LuLineChart } from "react-icons/lu";
@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import uuid from 'react-uuid';
 import { AppContext } from '../context/AppContext';
-
+import Spinner from './Spinner';
 
 
 const Home = () => {
@@ -18,6 +18,7 @@ const Home = () => {
   const [show, setShow] = useState(false);
   const [task, setTask] = useState("");
   const [mark, setMark] = useState("");
+  const [loading, setLoading] = useState(true);
   // const [result, setResult] = useState(null);
 
   const handleClose = () => setShow(false);
@@ -43,6 +44,13 @@ const Home = () => {
     addTask(obj);
     handleClose();
   }
+  useEffect(()=>{
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  
+    return () => clearTimeout(timeout);
+  },[])
 
   return (
     <>
@@ -82,14 +90,13 @@ const Home = () => {
         </Modal.Footer>
       </Modal>
 
-
       <section className='section1'>
         <h5>Welcome to Task Master!</h5>
         <div className='buttons'>
           <button className='addbtn' onClick={handleShow}>
             <IoAddCircleOutline className='addlogo' />Add New
           </button>
-          <Link to={'/analytics'}>
+          <Link to={'/analytics'} className='navlink'>
             <button className='addbtn'>
               <LuLineChart className='addlogo' />Today's Analaysis
             </button>
@@ -98,8 +105,8 @@ const Home = () => {
       </section>
 
       <h4>Your Today's Tasks</h4>
-      <Task />
 
+      {loading ? <Spinner /> : <Task />}
     </>
   )
 }
